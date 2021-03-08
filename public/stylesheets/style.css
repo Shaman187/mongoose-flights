@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: grey;
+}
+
+a {
+  color: green;
+}
+
+.topnav{
+  background-color: black;
+  text-align: center;
+  text-decoration: solid;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: purple;
+}
