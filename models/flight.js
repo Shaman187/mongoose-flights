@@ -1,19 +1,12 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-	
-// const flightSchema = new Schema({
-//   airline: String,
-//   releaseYear: Number,
-//   mpaaRating: String,
-//   cast: [String],
-//   nowShowing: Boolean
-// });
 
 const flightSchema = new mongoose.Schema({
   airline: {
       type: String,
       enum: ['American', 'Delta', 'Southwest', 'United'],
+      default: 'Southwest'
    },
 
   airport: {
@@ -31,11 +24,9 @@ const flightSchema = new mongoose.Schema({
   departs: {
       type: Date,
       default: function() {
-        //   console.log("hitting default")
-          return new Date().getFullYear() + 1
+          return new Date.getFullYear() + 1
       }
   },
-
   nowFlying: Boolean
 })
 	
