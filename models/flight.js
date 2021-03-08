@@ -23,8 +23,9 @@ const flightSchema = new mongoose.Schema({
 
   departs: {
       type: Date,
-      default: function() {
-          return new Date.getFullYear() + 1
+      default: function() { 
+        let oneYearFromNow = new Date();
+        return oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1); 
       }
   },
   nowFlying: Boolean
